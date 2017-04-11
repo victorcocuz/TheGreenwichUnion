@@ -1,0 +1,19 @@
+<resources>
+    <string name="main">Main Image</string>
+    <string name="app_name">The Greenwich Union</string>
+    <string name="description">Great beer and honest home made food in an unpretentious and friendly environment</string>
+    <string name="address">56 Royal Hill, Greenwich, London SE10 8RT</string>
+    <string name="phone">(+44) 020 8692 6258</string>
+    <string name="hours">Hours</string>
+    <string name="hours_1">Monday      12–11pm</string>
+    <string name="hours_2">Tuesday     12–11pm</string>
+    <string name="hours_3">Wednesday   12–11pm</string>
+    <string name="hours_4">Thursday    12–11pm</string>
+    <string name="hours_5">Friday      12–12pm</string>
+    <string name="hours_6">Saturday    12–12pm</string>
+    <string name="hours_7">Sunday      11–10pm</string>
+    <string name="map">Map</string>
+    <string name="home">Home</string>
+    <string name="food">Food</string>
+    <string name="drinks">Drinks</string>
+</resources>
