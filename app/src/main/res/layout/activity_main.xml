@@ -1,190 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/white"
-
     tools:context="com.victorcocuz.thegreenwichunion.MainActivity">
 
     <!--Main Picture-->
     <ImageView
-        android:contentDescription="@string/main"
-        android:id="@+id/main"
-        android:src="@drawable/meantime"
         android:layout_width="wrap_content"
         android:layout_height="180dp"
-        android:scaleType="centerCrop"/>
+        android:contentDescription="@string/main"
+        android:scaleType="centerCrop"
+        android:src="@drawable/meantime" />
 
     <!--Title-->
     <TextView
-        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/main"
-        android:textColor="@color/accent"
-        android:gravity="center"
-        android:fontFamily="sans-serif"
-        android:padding="4dp"
-        android:textSize="28sp"
+        android:layout_height="48dp"
+        android:layout_marginTop="-48dp"
         android:background="#cc000000"
-        android:text="@string/app_name" />
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/app_name"
+        android:textColor="@color/accent"
+        android:textSize="28sp" />
 
-    <!--Description-->
-    <TextView
-        android:id="@+id/description"
-        android:layout_below="@id/title"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:paddingBottom="4dp"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:textSize="16sp"
-        android:textAlignment="center"
-        android:textStyle="italic"
-        android:textColor="@color/light"
-        android:text="@string/description" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <!--Address-->
-        <ImageView
-            android:contentDescription="@string/address"
-            style="@style/image_contact"
-            android:layout_below="@id/description"
-            android:id="@+id/icon_address"
-            android:src="@drawable/icon_address" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TextView
-            style="@style/text_contact1"
-            android:layout_below="@id/description"
-            android:layout_toEndOf="@id/icon_address"
-            android:text="@string/address"/>
+            <!--Description-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:text="@string/description"
+                android:textAlignment="center"
+                android:textColor="@color/light"
+                android:textSize="16sp"
+                android:textStyle="italic" />
 
-    <!--Phone-->
-        <ImageView
-            android:contentDescription="@string/phone"
-            style="@style/image_contact"
-            android:layout_below="@id/icon_address"
-            android:id="@+id/icon_phone"
-            android:src="@drawable/icon_phone" />
+            <!--Address-->
+            <LinearLayout
+                android:id="@+id/address"
+                style="@style/grid_linear_layout"
+                android:background="@color/accent"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp">
 
-        <TextView
-            style="@style/text_contact1"
-            android:layout_below="@id/icon_address"
-            android:layout_toEndOf="@id/icon_phone"
-            android:text="@string/phone"/>
+                <ImageView
+                    style="@style/image_contact"
+                    android:contentDescription="@string/address"
+                    android:src="@drawable/icon_address" />
 
-    <!--Hours-->
-        <ImageView
-            android:contentDescription="@string/hours"
-            style="@style/image_contact"
-            android:layout_below="@id/icon_phone"
-            android:id="@+id/icon_hours"
-            android:src="@drawable/icon_hours" />
+                <TextView
+                    style="@style/text_contact"
+                    android:text="@string/address" />
 
-        <TextView
-            android:id="@+id/hours1"
-            style="@style/text_contact1"
-            android:layout_below="@id/icon_phone"
-            android:layout_toEndOf="@id/icon_hours"
-            android:text="@string/hours_1"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/hours2"
-            style="@style/text_contact2"
-            android:layout_below="@id/hours1"
-            android:layout_toEndOf="@id/icon_hours"
-            android:text="@string/hours_2"/>
+            <!--Contact-->
+            <LinearLayout
+                android:id="@+id/phone"
+                style="@style/grid_linear_layout"
+                android:background="@color/accent"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp">
 
-        <TextView
-            android:id="@+id/hours3"
-            style="@style/text_contact2"
-            android:layout_below="@id/hours2"
-            android:layout_toEndOf="@id/icon_hours"
-            android:text="@string/hours_3"/>
+                <ImageView
+                    style="@style/image_contact"
+                    android:contentDescription="@string/phone"
+                    android:src="@drawable/icon_phone" />
 
-        <TextView
-            android:id="@+id/hours4"
-            style="@style/text_contact2"
-            android:layout_below="@id/hours3"
-            android:layout_toEndOf="@id/icon_hours"
-            android:text="@string/hours_4"/>
+                <TextView
+                    style="@style/text_contact"
+                    android:text="@string/phone" />
 
-        <TextView
-            android:id="@+id/hours5"
-            style="@style/text_contact2"
-            android:layout_below="@id/hours4"
-            android:layout_toEndOf="@id/icon_hours"
-            android:text="@string/hours_5"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/hours6"
-            style="@style/text_contact2"
-            android:layout_below="@id/hours5"
-            android:layout_toEndOf="@id/icon_hours"
-            android:text="@string/hours_6"/>
+            <!--Hours-->
+            <LinearLayout style="@style/grid_linear_layout">
 
-        <TextView
-            android:id="@+id/hours7"
-            style="@style/text_contact2"
-            android:layout_below="@id/hours6"
-            android:layout_toEndOf="@id/icon_hours"
-            android:text="@string/hours_7"/>
+                <ImageView
+                    style="@style/image_contact"
+                    android:contentDescription="@string/hours"
+                    android:src="@drawable/icon_hours" />
 
-    <!--Map-->
-        <ImageView
-            android:contentDescription="@string/map"
-            android:id="@+id/map"
-            android:layout_below="@id/icon_phone"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/map"
-            android:scaleType="centerCrop"
-            android:layout_height="160dp"
-            android:layout_width="160dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/days_1" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/days_2" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/days_3" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/days_4" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/days_5" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/days_6" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/days_7" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/hours_1" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/hours_2" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/hours_3" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/hours_4" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/hours_5" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/hours_6" />
+
+                    <TextView
+                        style="@style/text_contact"
+                        android:text="@string/hours_7" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Map-->
+            <ImageView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/map"
+                android:scaleType="centerCrop"
+                android:src="@drawable/map" />
+        </LinearLayout>
+    </ScrollView>
 
     <!--Menu-->
-        <LinearLayout
-            android:id="@+id/menu"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/primary"
-            android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/primary"
+        android:orientation="horizontal">
 
+        <ImageView
+            style="@style/menu"
+            android:background="@color/accent"
+            android:contentDescription="@string/home"
+            android:src="@drawable/icon_home" />
 
-            <ImageView
-                android:contentDescription="@string/home"
-                style="@style/image_menu"
-                android:id="@+id/image_home"
-                android:src="@drawable/icon_home"
-                android:background="@color/accent"
-                android:layout_weight="2"/>
+        <ImageView
+            style="@style/line_vertical"
+            tools:ignore="contentDescription" />
 
-            <ImageView
-                tools:ignore="contentDescription"
-                style="@style/line_vertical" />
+        <ImageView
+            style="@style/menu"
+            android:contentDescription="@string/food"
+            android:src="@drawable/icon_food" />
 
-            <ImageView
-                android:contentDescription="@string/food"
-                style="@style/image_menu"
-                android:id="@+id/image_food"
-                android:src="@drawable/icon_food"
-                android:layout_weight="2"/>
+        <ImageView
+            style="@style/line_vertical"
+            tools:ignore="contentDescription" />
 
-            <ImageView
-                tools:ignore="contentDescription"
-                style="@style/line_vertical" />
-
-            <ImageView
-                android:contentDescription="@string/drinks"
-                style="@style/image_menu"
-                android:id="@+id/image_drinks"
-                android:src="@drawable/icon_drinks"
-                android:layout_weight="2"/>
-        </LinearLayout>
-</RelativeLayout>
+        <ImageView
+            style="@style/menu"
+            android:contentDescription="@string/drinks"
+            android:src="@drawable/icon_drinks" />
+    </LinearLayout>
+</LinearLayout>
